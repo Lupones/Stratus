@@ -1,5 +1,5 @@
 # Stratus
-Stratus Resource and Application Manager software
+Stratus Resource and Application Manager software developed at Universitat Politècnica de València (UPV).
 
 This repository contains the code of the software developed for the experimental hardware testbed Stratus used to perform resource management research in cloud computing and high-performance computing (HPC). 
 
