@@ -69,14 +69,13 @@ Stratus/linux/tools/perf$ V=1 NO_LIBPERL=1 NO_LIBPYTHON=1 NO_DWARF=1 NO_NEWT=1 N
 ```
 
 3. Download/clone (and build if needed) all the necessary libraries, each into a new folder:
-- Linux Perf tool in the Linux source files
-- [libcpuid: a small C library for x86 CPU detection and feature extraction](https://github.com/anrieff/libcpuid)
-- [FMT: a modern formatting library](https://github.com/fmtlib/fmt)
-- [cxx-prettyprint: a C++ library that allows automagic pretty-printing](https://github.com/louisdx/cxx-prettyprint)
-- [Intel(R) Resource Director Technology](https://github.com/intel/intel-cmt-cat)
-- [Intel Performance Counter Monitor](https://github.com/opcm/pcm)
-- [stacktrace: C++ library for storing and printing backtraces](https://github.com/boostorg/stacktrace)
-- Boost: copy the contents of stacktrace/include/boost/ to boost folder
+- Linux Perf tool in the Linux source files - folder name *linux*
+- [libcpuid: a small C library for x86 CPU detection and feature extraction](https://github.com/anrieff/libcpuid) - folder name *libcpuid*
+- [FMT: a modern formatting library](https://github.com/fmtlib/fmt) - folder name *fmt*
+- [cxx-prettyprint: a C++ library that allows automagic pretty-printing](https://github.com/louisdx/cxx-prettyprint) - folder name *cxx-prettyprint*
+- [Intel(R) Resource Director Technology](https://github.com/intel/intel-cmt-cat) - folder name *intel-cmt-cat*
+- [Intel Performance Counter Monitor](https://github.com/opcm/pcm) - folder name *intel-pcm*
+- [stacktrace: C++ library for storing and printing backtraces](https://github.com/boostorg/stacktrace). Copy the contents of stacktrace/include/boost/ to folder named *boost*
 ```
 Stratus$ cp -r stacktrace/include/boost/* boost 
 ```
@@ -152,7 +151,7 @@ A **test** folder has been created. It includes several directories -lauch-VM-ta
 
 - **lauch-VM-tailbench:** Experiment launching Tailbench application img-dnn in a single VM. Tailbench applications can be downloaded at https://github.com/supreethkurpad/Tailbench
 - **launch-graph-LLCpart:** Experiment launching graph applications from GAP benchmark suite (algorithm PR + inputs Kron, Twitter, Urand and Web). The template specifies that the LLC space of the application launched is reduced to 7 cache ways. GAP benchmarks can be downloaded at https://github.com/sbeamer/gapbs
-- **launch-VMs-NAS:* Experiment launching three NAS Parallel applications (cg.C.x, ft.C.x and mg.C.x) in three different VMs. NAS Parallel applications can be downloaded at https://www.nas.nasa.gov/software/npb.html
+- **launch-VMs-NAS:** Experiment launching three NAS Parallel applications (cg.C.x, ft.C.x and mg.C.x) in three different VMs. NAS Parallel applications can be downloaded at https://www.nas.nasa.gov/software/npb.html
 
 Each folder includes a file, **template.mako**, that indicates the policy to launch as well as other execution parameters such as the performance counters that are going to be monitored. 
 
